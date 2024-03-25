@@ -6,7 +6,6 @@ Objective: Translate the dialogue of the idol cultivation game from Japanese to 
 Input Format:
 - Multiple lines.
 - Each line: [index]|[name]|[text].
-- The [text] might contain '\\n'
 
 Output Format:
 - Multiple lines.

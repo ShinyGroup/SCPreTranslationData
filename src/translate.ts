@@ -36,6 +36,10 @@ async function translateCsvTextInfo(csvTextInfo: CsvTextInfo, config: LLMConfig)
   const translatedDialogues = DialogueListDeser.deserialize(gptOutput)
   for (let index = 0; index < translatedDialogues.length; index++) {
     const dialogue = translatedDialogues[index];
+    if (dialogue == undefined) {
+      log.error(`Error: dialogue is undefined at index ${index}`)
+      continue
+    }
     csvTextInfo.data[index].trans = dialogue.text
   }
   csvTextInfo.translator = config.model
@@ -98,6 +102,7 @@ async function chat(
           { role: "user", content: userInput },
         ],
         temperature: 0.5,
+        max_tokens: 4096,
       },
       {
         timeout: 180000,
