@@ -1,7 +1,7 @@
 import log from "loglevel";
 // const log = console
 import axios from "axios";
-import { systemPrompt } from "./prompts";
+import { systemPrompt, chinesePrompt } from "./prompts";
 import { CsvTextInfo, toCsvText, jsonTextToCsvText, extractInfoFromCsvText, } from "./csv"
 
 interface Dialogue {
@@ -96,13 +96,13 @@ async function chat(
       {
         model,
         messages: [
-          { role: "system", content: systemPrompt },
+          { role: "system", content: chinesePrompt },
           // { 'role': 'user', content: exampleInput },
           // {'role': 'assistant', content: exampleOutput},
           { role: "user", content: userInput },
         ],
         temperature: 0.5,
-        max_tokens: 4096,
+        max_tokens: 6000,
       },
       {
         timeout: 180000,

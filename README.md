@@ -28,12 +28,19 @@
 - 运行路径助手脚本：`yarn move`，翻译完成的文件（`tmp/translated`）会被放入`data`文件夹中
 - 提交文件即可
 
-## 模型
+## 参数配置
 
-可选模型：
+### OPENAI_BASE_URL
 
-- claude-3-opus-20240229 <- 速度比gpt4稍快
-- gpt-4-0125-preview / gpt-4-turbo-preview
-- gpt-3.5-turbo-0125 / gpt-3.5-turbo
-- gemini-pro
-- moonshot-v1-8k
+### OPENAI_API_KEY
+OPENAI_BASE_URL=https://aihubmix.com/
+
+### MODEL
+
+使用的模型，可选模型：
+
+- gemini-pro <-推荐1，速度快，质量高，收费较低
+- moonshot-v1-8k <- 推荐2，速度快，质量高，收费较低
+- gpt-4-0125-preview / gpt-4-turbo-preview <- 不推荐，质量高，但是速度极慢。贵。
+- claude-3-opus-20240229 <- <- 不推荐，质量高，速度比gpt4稍快，但仍然很慢。贵。
+- gpt-3.5-turbo-0125 / gpt-3.5-turbo <- 可选，速度快，质量也不错
