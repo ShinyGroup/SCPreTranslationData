@@ -12,6 +12,7 @@
     "@types/node": "^20.11.30",
     "@types/papaparse": "^5.3.14",
     "axios": "^1.6.8",
+    "md5-file": "^5.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
   },
@@ -26,6 +27,7 @@
   "scripts": {
     "translate:folder": "ts-node ./scripts/translate.ts --type folder",
     "translate:latest": "ts-node ./scripts/translate.ts --type remote-diff",
-    "move": "ts-node ./scripts/moveTranslated.ts"
+    "move": "ts-node ./scripts/moveTranslated.ts",
+    "deploy:csv": "ts-node ./scripts/deployCSV.ts"
   }
 }
