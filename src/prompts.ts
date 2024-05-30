@@ -65,6 +65,7 @@ export const chinesePrompt = `
   - プロデュース - 育成 或 培育
   - アンティーカ - L'Antica
   - コメティック - CoMETIK
+  - シーズ - SHHis
 
 示例：
 输入：
