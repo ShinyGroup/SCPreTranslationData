@@ -54,7 +54,7 @@ export async function translateCsvString(
   const batchNum = Math.ceil(csvTextInfo.data.length / maxBatchSize)
   log.info(`Splitting csvTextInfo into ${batchNum} batches`)
   const csvTextInfos = splitCsvInfo(csvTextInfo, batchNum)
-  await Promise.all(csvTextInfos.map(csvTextInfo => translateCsvTextInfo(csvTextInfo, config)))
+  await Promise.all(csvTextInfos.map(csvTextInfo => translateCsvTextInfo(csvTextInfo, config, 2)))
   return toCsvText(mergeCsvInfo(csvTextInfos));
 }
 
